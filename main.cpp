@@ -23,12 +23,11 @@ int main(){
     } else {
         if(input == 1){
 
-       unsigned int secretNumber = 0;
-       srand(unsigned(time(0)));
-       secretNumber = rand()%10 + 1;
+        unsigned int secretNumber = 0;
+        srand(unsigned(time(0)));
+        secretNumber = rand()%10 + 1;
 
         int answer;
-        int random [10] = {1,2,3,4,5,6,7,8,9,10};
 
         cout << "Easy mode" << endl;
 
@@ -39,7 +38,19 @@ int main(){
         if(answer == secretNumber){
            cout << "You got the number right!";
         } else {
-           cout << "Try again, the number was " << secretNumber << endl;
+                cout << "try again," << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it!";
+            } else {
+                cout << "try again," << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it!";
+            } else {
+                cout << "End of game the answer was " << secretNumber << endl;
+            }
+        }
         }
 
 
