@@ -16,6 +16,7 @@ int main(){
     cout << "2. Medium" << endl;
     cout << "3. Hard" << endl;
     cout << "4. Extreme" << endl;
+    cout << "5. Exit Game" << endl;
 
     cin >> input;
 
@@ -61,11 +62,105 @@ int main(){
         }
 
     } else if (input == 2){
+
+        unsigned int secretNumber = 0;
+        srand(unsigned(time(0)));
+        secretNumber = rand()%20 + 1;
+
+        int answer;
+
         cout << "Medium mode";
+
+        cout << "pick a number between 1-20" << endl;
+
+        cin >> answer; 
+
+        if(answer == secretNumber){
+           cout << "You got it! The secret number was " << secretNumber;
+        } else {
+                cout << "Wrong, try again" << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it! The secret number was " << secretNumber;
+            } else {
+                cout << "Wrong, try again" << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it! The secret number was " << secretNumber;
+            } else {
+                cout << "End of game, the answer was " << secretNumber << endl;
+            }
+          }
+        }
+
+
     } else if(input == 3){
+
+        unsigned int secretNumber = 0;
+        srand(unsigned(time(0)));
+        secretNumber = rand()%30 + 1;
+
+        int answer;
+
         cout << "Hard mode";
+
+        cout << "pick a number between 1-30" << endl;
+
+        cin >> answer; 
+
+        if(answer == secretNumber){
+           cout << "You got it! The secret number was " << secretNumber;
+        } else {
+                cout << "Wrong, try again" << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it! The secret number was " << secretNumber;
+            } else {
+                cout << "Wrong, try again" << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it! The secret number was " << secretNumber;
+            } else {
+                cout << "End of game, the answer was " << secretNumber << endl;
+            }
+          }
+        }
+
+
     } else if (input == 4){
+
+        unsigned int secretNumber = 0;
+        srand(unsigned(time(0)));
+        secretNumber = rand()%40 + 1;
+
+        int answer;
+
         cout << "Extreme mode";
+
+        cout << "pick a number between 1-40" << endl;
+
+        cin >> answer; 
+
+        if(answer == secretNumber){
+           cout << "You got it! The secret number was " << secretNumber;
+        } else {
+                cout << "Wrong, try again" << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it! The secret number was " << secretNumber;
+            } else {
+                cout << "Wrong, try again" << endl;
+                cin >> answer;
+            if(answer == secretNumber){
+                cout << "You got it! The secret number was " << secretNumber;
+            } else {
+                cout << "End of game, the answer was " << secretNumber << endl;
+            }
+          }
+        }
+    } else if(input == 5){
+        cout << "...Closing Game.";
+        return 0;
     }
     }
 
