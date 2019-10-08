@@ -5,7 +5,11 @@ using namespace std;
 
 int main(){
 
+    //Main input variable to choose difficulty. 
+
     int input;
+
+    // Main menu 
 
     cout << "Welcome to guess the number, choose dificulty." << endl << endl;
     cout << "1. Easy" << endl;
@@ -14,6 +18,9 @@ int main(){
     cout << "4. Extreme" << endl;
 
     cin >> input;
+
+    // If user doesn't provide int, display error message. 
+    //otherwise run program. 
 
     if(!input){
         int input;
@@ -36,23 +43,22 @@ int main(){
         cin >> answer; 
 
         if(answer == secretNumber){
-           cout << "You got the number right!";
+           cout << "You got it! The secret number was " << secretNumber;
         } else {
-                cout << "try again," << endl;
+                cout << "Wrong, try again" << endl;
                 cin >> answer;
             if(answer == secretNumber){
-                cout << "You got it!";
+                cout << "You got it! The secret number was " << secretNumber;
             } else {
-                cout << "try again," << endl;
+                cout << "Wrong, try again" << endl;
                 cin >> answer;
             if(answer == secretNumber){
-                cout << "You got it!";
+                cout << "You got it! The secret number was " << secretNumber;
             } else {
-                cout << "End of game the answer was " << secretNumber << endl;
+                cout << "End of game, the answer was " << secretNumber << endl;
             }
+          }
         }
-        }
-
 
     } else if (input == 2){
         cout << "Medium mode";
